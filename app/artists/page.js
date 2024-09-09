@@ -8,8 +8,8 @@ async function Artists() {
   return (
     <div className="h-full">
     <div className="flex flex-wrap items-center justify-around mt-8 mb-32">
-      {artists.map(artist => (
-        <ArtistCard artistData={artist}></ArtistCard>
+      {artists.map((artist, index) => (
+        <ArtistCard artistData={artist} key={index}></ArtistCard>
       ))}
     </div>
   </div>

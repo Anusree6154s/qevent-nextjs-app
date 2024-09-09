@@ -24,8 +24,6 @@ const Events = ({ params }) => {
 
     return (
         <div className="h-full flex flex-col items-center m-8 gap-2">
-            {/* <div className="flex flex-wrap items-center justify-around mt-8 mb-32">
-            </div> */}
             <img src={event.image} alt="" className="w-1/3" />
             <div className="w-2/3">
                 <h1 className="text-3xl font-bold max-sm:text-3xl bg-gradient-to-br from-orange-400 to-teal-600 bg-clip-text text-transparent">{event.name}</h1>
@@ -33,8 +31,8 @@ const Events = ({ params }) => {
                 <p className="text-lg font-bold max-sm:text-3xl bg-gradient-to-br from-orange-400 to-teal-600 bg-clip-text text-transparent">{event.artist}</p>
                 <br />
                 <br />
-                <div className="flex gap-4">{event.tags && event.tags.map(tag => (
-                    <Tag text={tag}></Tag>
+                <div className="flex gap-4">{event.tags && event.tags.map((tag, index) => (
+                    <Tag text={tag} key={index}></Tag>
                 ))}</div>
                 <br />
                 <p>{event.description}</p>
