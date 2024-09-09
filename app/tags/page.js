@@ -8,8 +8,8 @@ async function Tags() {
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="flex flex-wrap gap-4 justify-center w-3/4">
-        {data.map(item => (
-          <Tag text={item.name}></Tag>
+        {data.map((item, index) => (
+          <Tag text={item.name} key={index} ></Tag>
         ))}
       </div>
     </div>
